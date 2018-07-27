@@ -1,0 +1,22 @@
+{
+  "name": "scmq",
+  "version": "1.0.0",
+  "description": "快速的项目启动",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "scmq": "./bin/scmq.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KnoveZ/scmq.git"
+  },
+  "author": "Knove",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KnoveZ/scmq/issues"
+  },
+  "homepage": "https://github.com/KnoveZ/scmq#readme"
+}
