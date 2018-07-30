@@ -22,16 +22,16 @@ npm install scmq -g
 ### On cmd/PowerShell... (Windows)
 
 ```javascript
-scmq config-set dir1 D:/xxx/merchants          // 设置merchants项目目录
-scmq config-set dir2 D:/xxx/cloud-account_scm  // 设置cloud-account_scm目录
+scmq config-set dir1 D:\xxx\merchants          // 设置merchants项目目录
+scmq config-set dir2 D:\xxx\cloud-account_scm  // 设置cloud-account_scm目录
 scmq config-set type dev                       // 指定后端是dev环境还是tst环境
 scmq config                                    // 查看配置项
 scmq go                                        // 启动！
 ```
 ## API
-### scmq config 
+### scmq config
 * **查看config**: 查看所有的设置 , 包括 dir1(merchants项目目录), dir2(cloud-account_scm目录), type(后端是dev环境还是tst环境)
-### scmq config-set 
+### scmq config-set
 * **设置config**: 设置config , 目前包括可以设置 : dir1, dir2, type.
 type中，只有以下三个可选项 [dev, tst, test]
 * **例子**: scmq config-set dir1 D:/choice/merchants

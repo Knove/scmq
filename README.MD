@@ -21,16 +21,16 @@ npm install scmq -g
 ### On cmd/PowerShell... (Windows)
 
 ```javascript
-scmq config-set dir1 D:/xxx/xxx  // set primary project path
-scmq config-set dir2 D:/xxx/xxx  // set secondary project path
+scmq config-set dir1 D:\xxx\xxx  // set primary project path
+scmq config-set dir2 D:\xxx\xxx  // set secondary project path
 scmq config-set type dev         // set run type
 scmq config                      // see config
 scmq go                          // go!
 ```
 ## API
-### scmq config 
+### scmq config
 * **view config**: view all config , inclues dir1, dir2, type
-### scmq config-set 
+### scmq config-set
 * **set config**: set config , have : dir1, dir2, type.
 type only use [dev, tst, test]
 * **eg**: scmq config-set dir1 D:/choice/merchants
