@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/KnoveZ/scmq/issues"
   },
-  "homepage": "https://github.com/KnoveZ/scmq#readme"
+  "homepage": "https://github.com/KnoveZ/scmq#readme",
+  "dependencies": {
+    "rimraf": "^2.6.2"
+  }
 }
