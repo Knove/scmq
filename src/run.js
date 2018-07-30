@@ -17,16 +17,16 @@ function run(dir1, dir2, kYype){
         }
         console.log('update type to ' + chalk.bgWhite.red(kYype) + ' success!' );
         // 2. start servers
-        console.log('running ...' + dir1);  
+        console.log('running ...' + dir1);
         nodeCmd.get(
-          `${driveLetterDir1}:&cd ${dir1}&yarn start`,
+          `${driveLetterDir1}:&cd ${dir1}&npm start`,
           function(err, data, stderr){
               console.log(data);
           }
         );
-        console.log('running ...' + dir2);  
+        console.log('running ...' + dir2);
         nodeCmd.get(
-        `${driveLetterDir2}:&cd ${dir2}&yarn start`,
+        `${driveLetterDir2}:&cd ${dir2}&npm start`,
         function(err, data, stderr){
             console.log(data);
         }
