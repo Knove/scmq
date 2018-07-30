@@ -4,12 +4,13 @@
 const chalk = require('chalk');
 const fs = require("fs");
 const readline = require('readline');
+const path = require('path');
 // private package
 const saveConfig = require("../src/saveConfig");
 const run = require("../src/run");
 // config data
 const script = process.argv[2];
-const data = fs.readFileSync('config.txt');
+const data = fs.readFileSync(path.join(__dirname, "../config.txt"));
 const dir1 = data.toString().split('\n')[0];
 const dir2 = data.toString().split('\n')[1];
 const kYype = data.toString().split('\n')[2];

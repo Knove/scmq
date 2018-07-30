@@ -1,6 +1,6 @@
 {
   "name": "scmq",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "quick project start!",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

@@ -1,5 +1,6 @@
 const fs = require("fs");
 const chalk = require('chalk');
+const path = require('path');
 
 function saveConfig(dir, text, dir1, dir2, kYype){
     let writeText = '';
@@ -7,7 +8,7 @@ function saveConfig(dir, text, dir1, dir2, kYype){
     dir === 'dir2' ? writeText += ('dir2=' + text) : writeText += dir2; writeText += '\n';
     dir === 'type' ? writeText += ('type=' + text) : writeText += kYype;
     if (text)
-    fs.writeFile('config.txt', writeText , function(err) {
+    fs.writeFile(path.join(__dirname, "../config.txt"), writeText , function(err) {
         if (err) {
             return console.error(err);
         }
