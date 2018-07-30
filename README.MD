@@ -4,8 +4,9 @@
 [![NPM downloads](http://img.shields.io/npm/dm/scmq.svg?style=flat)](https://npmjs.org/package/scmq)
 
 FOR Node.js
----
 
+---
+[中文文档](https://github.com/KnoveZ/scmq/blob/master/README.CN.MD)
 ## Features
 
 * **quickly DIY config**:  No longer go through folders and change configuration directly

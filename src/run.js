@@ -6,6 +6,8 @@ function run(dir1, dir2, kYype){
     console.log(chalk.blue('———————————————————————————————————————————————'));
     if (dir1 && dir2 && kYype) {
     // 1. reload roadhogrc file
+    const driveLetterDir1 = dir1.substr(0, 1);
+    const driveLetterDir2 = dir2.substr(0, 1);
     const data = fs.readFileSync(dir2 + '/.roadhogrc');
     let roadhogrc = data.toString();
     const nowRoadhogrc = roadhogrc.replace(/dev/g, kYype).replace(/test/g, kYype).replace(/tst/g, kYype);
@@ -17,14 +19,14 @@ function run(dir1, dir2, kYype){
         // 2. start servers
         console.log('running ...' + dir1);  
         nodeCmd.get(
-          `cd ${dir1}&yarn start`,
+          `${driveLetterDir1}:&cd ${dir1}&yarn start`,
           function(err, data, stderr){
               console.log(data);
           }
         );
         console.log('running ...' + dir2);  
         nodeCmd.get(
-        `cd ${dir2}&yarn start`,
+        `${driveLetterDir2}:&cd ${dir2}&yarn start`,
         function(err, data, stderr){
             console.log(data);
         }

@@ -49,6 +49,14 @@ switch (script) {
       break;
     case 'go':
       // start
+      console.log(chalk.magenta('【CONFIG】'));
+      console.log('DIR - 1 : ');
+      console.log(dir1.split('=')[1] || '<   >');
+      console.log('DIR - 2 : ');
+      console.log(dir2.split('=')[1] || '<   >');
+      console.log('TYPE : ');
+      console.log(chalk.bgWhite.red(kYype.split('=')[1]) + ' eg. dev,tst,test');
+      console.log(chalk.blue('———————————————————————————————————————————————'));
       const  rl = readline.createInterface({
         input:process.stdin,
         output:process.stdout
