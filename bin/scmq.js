@@ -33,6 +33,21 @@ console.log(chalk.blue('——————————————————�
 
 if (flag)
 switch (script) {
+    case undefined:
+      console.log('Hello！');
+      break;
+    case 'set':
+      console.log('SET');
+      break;  
+    case 'list':
+      console.log('LIST');
+      break; 
+    case 'use':
+      console.log('USE');
+    break; 
+    case 'add':
+      console.log('USE');
+    break; 
     case '-v':
     case '--version':
       console.log('SCMQ V' + require('../package.json').version);
