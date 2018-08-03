@@ -14,6 +14,7 @@ const data = fs.readFileSync(path.join(__dirname, "../config.txt"));
 const dir1 = data.toString().split('\n')[0];
 const dir2 = data.toString().split('\n')[1];
 const kYype = data.toString().split('\n')[2];
+const ip = data.toString().split('\n')[3];
 // global data
 const flag = true;
 
@@ -38,7 +39,7 @@ switch (script) {
       break;
     case 'config-set':
       // save config info
-      saveConfig(process.argv[3],process.argv[4], dir1, dir2, kYype); 
+      saveConfig(process.argv[3],process.argv[4], dir1, dir2, kYype, ip); 
       break;
     case 'help':
     case '-help':
@@ -54,6 +55,8 @@ switch (script) {
       console.log(dir1.split('=')[1] || '<   >');
       console.log('DIR - 2 : ');
       console.log(dir2.split('=')[1] || '<   >');
+      console.log('IP : ');
+      console.log(ip.split('=')[1] || '<   >');
       console.log('TYPE : ');
       console.log(chalk.bgWhite.red(kYype.split('=')[1]) + ' eg. dev,tst,test');
       console.log(chalk.blue('———————————————————————————————————————————————'));
@@ -64,7 +67,7 @@ switch (script) {
       rl.question(chalk.whiteBright('Go? (Press N stop)'), function(answer) {
           if (answer === 'N' || answer === 'n' ) console.log('Bye!');
           else {
-            run(dir1.split('=')[1], dir2.split('=')[1], kYype.split('=')[1]);
+            run(dir1.split('=')[1], dir2.split('=')[1], kYype.split('=')[1], ip.split('=')[1]);
           }   
           rl.close();
     });
@@ -75,8 +78,11 @@ switch (script) {
       console.log(dir1.split('=')[1] || '<   >');
       console.log('DIR - 2 : ');
       console.log(dir2.split('=')[1] || '<   >');
+      console.log('IP : ');
+      console.log(ip.split('=')[1] || '<   >');
       console.log('TYPE : ');
       console.log(chalk.bgWhite.red(kYype.split('=')[1]) + ' eg. dev,tst,test');
+      
       console.log(chalk.blue('———————————————————————————————————————————————'));
       break;
     default:

@@ -24,11 +24,21 @@ npm install scmq -g
 ```javascript
 scmq config-set dir1 D:\xxx\merchants          // 设置merchants项目目录
 scmq config-set dir2 D:\xxx\cloud-account_scm  // 设置cloud-account_scm目录
+scmq config-set ip 10.10.1.131                 // 指定merchants的后端IP
 scmq config-set type dev                       // 指定后端是dev环境还是tst环境
 scmq config                                    // 查看配置项
 scmq go                                        // 启动！
 ```
 ## API
+可以见到，这里有4个配置项，分别是(这四个配置项名称不许改变)
+
+dir1 : merchants 主供应链react项目目录（必填）
+
+dir2: cloud-account_scm 云平台项目目录（必填）
+
+ip: merchants 的后端地址 （不配置则默认不改变)
+
+type: cloud-account_scm的环境，有dev、tst等 （不配置默认是dev)
 ### scmq config
 * **查看config**: 查看所有的设置 , 包括 dir1(merchants项目目录), dir2(cloud-account_scm目录), type(后端是dev环境还是tst环境)
 ### scmq config-set

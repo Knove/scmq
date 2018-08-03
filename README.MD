@@ -23,11 +23,20 @@ npm install scmq -g
 ```javascript
 scmq config-set dir1 D:\xxx\xxx  // set primary project path
 scmq config-set dir2 D:\xxx\xxx  // set secondary project path
+scmq config-set ip 10.10.1.131   // set IP
 scmq config-set type dev         // set run type
 scmq config                      // see config
 scmq go                          // go!
 ```
 ## API
+config have 4 options. They are not allowed to be changed.
+dir1 : merchants 
+
+dir2: cloud-account_scm
+
+ip: IP
+
+type: have : dir1, dir2, type.
 ### scmq config
 * **view config**: view all config , inclues dir1, dir2, type
 ### scmq config-set
