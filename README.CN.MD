@@ -24,7 +24,7 @@ npm install scmq -g
 ```javascript
 scmq config-set dir1 D:\xxx\merchants          // 设置merchants项目目录
 scmq config-set dir2 D:\xxx\cloud-account_scm  // 设置cloud-account_scm目录
-scmq config-set ip 10.10.1.131                 // 指定merchants的后端IP
+scmq config-set ip 10.10.1.131:8080            // 指定merchants的后端IP
 scmq config-set type dev                       // 指定后端是dev环境还是tst环境
 scmq config                                    // 查看配置项
 scmq go                                        // 启动！

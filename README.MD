@@ -23,7 +23,7 @@ npm install scmq -g
 ```javascript
 scmq config-set dir1 D:\xxx\xxx  // set primary project path
 scmq config-set dir2 D:\xxx\xxx  // set secondary project path
-scmq config-set ip 10.10.1.131   // set IP
+scmq config-set ip xxx.xxx:8080  // set IP
 scmq config-set type dev         // set run type
 scmq config                      // see config
 scmq go                          // go!
