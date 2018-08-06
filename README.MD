@@ -1,17 +1,17 @@
-# SCMQ Quick Project Start
+# SCMQ -  Many Project Start Manage
 
 [![NPM version](https://img.shields.io/npm/v/scmq.svg?style=flat)](https://npmjs.org/package/scmq)
 [![NPM downloads](http://img.shields.io/npm/dm/scmq.svg?style=flat)](https://npmjs.org/package/scmq)
 
-FOR Node.js
 
 ---
 [中文文档](https://github.com/KnoveZ/scmq/blob/master/README.CN.MD)
 ## Features
 
-* **quickly DIY config**:  No longer go through folders and change configuration directly
-* **Quckly**: One button can be started, convenient and quick
-
+* **Quickly**:  Only once configuration, one key start!
+* **Flexible**: Custom directory and boot mode configuration
+* **Group**: Multiple project groups, easy to manage
+* **No Interference**: Do not affect the original startup characteristics
 ## Install
 
 ```bash
@@ -19,31 +19,81 @@ npm install scmq -g
 ```
 ## Usages
 ### On cmd/PowerShell... (Windows)
-
+When you have two project need to start.
 ```javascript
-scmq config-set dir1 D:\xxx\xxx  // set primary project path
-scmq config-set dir2 D:\xxx\xxx  // set secondary project path
-scmq config-set ip xxx.xxx:8080  // set IP
-scmq config-set type dev         // set run type
-scmq config                      // see config
-scmq go                          // go!
+// see all config
+scmq list
+// add a group, named: G1          
+scmq add g G1
+// add a project to G1 : named: p1, directory: D:\p1 , start command: npm start
+scmq add G1 p1 D:\p1 "npm start"
+// add a project2 to G1 : named: p2, directory: D:\p2 , start command: npm start
+scmq add G1 p2 D:\p2 "npm start"
+// start !
+scmq
+```
+When you have 2 group (3 project) need to start
+```javascript
+// see all config
+scmq list
+// add a group, named: G1          
+scmq add g G1
+// add a project to G1 : named: p1, directory: D:\p1 , start command: npm start
+scmq add G1 p1 D:\p1 "npm start"
+// add a project2 to G1 : named: p2, directory: D:\p2 , start command: npm start
+scmq add G1 p2 D:\p2 "npm start"
+// add a group, named: G2         
+scmq add g G2
+// add a project to G2 : named: p3, directory: D:\p3 , start command: npm start
+scmq add G2 p3 D:\p3 "npm start"
+// start G2 !
+scmq start G2
+// may start G1 !
+scmq
+```
+When you have been configured, the second day want to start :D
+```javascript
+// start G1！
+scmq
+// may also start G1!
+scmq start G1
+// set default start group
+scmq use G2
+// may start G2!
+scmq 
 ```
 ## API
-config have 4 options. They are not allowed to be changed.
-dir1 : merchants 
+### scmq list
+* **view config**: view all config 
+### scmq add <1> <2> <3> <4>
+if <1> is "group" or "g", program may add group. now:
+* **scmq add group <1>**
+* **<1>** group name, Not allowed to repeat.
+* **example**: scmq add group G1 // add one group, named G1
 
-dir2: cloud-account_scm
+if <1> not is "group" or "g", program may add project. now: 
+* **scmq add <1> <2> <3> <4>** 
+* **<1>** location group name
+* **<2>** project name, Not allowed to repeat.
+* **<3>** project directory
+* **<4>** project start command
+* **example**: scmq add G1 p1 D:\p1 "npm start" //add a project to G1 : named: p1, directory: D:\p1 , start command: npm start
+### scmq & scmq start / run 
+* **scmq start <1>**
+* **<1>** optional, group name.If it is empty, the default will be run.
+### scmq use
+* **scmq use <1>**
+* **<1>** Specify the default start Group.
+### scmq remove <1> <2> <3> <4>
+if <1> is "group" or "g", program may remove group. now:
+* **scmq remove group <1>**
+* **<1>** group name
+* **example**: scmq remove group G1 // remove G1 group
 
-ip: IP
-
-type: have : dir1, dir2, type.
-### scmq config
-* **view config**: view all config , inclues dir1, dir2, type
-### scmq config-set
-* **set config**: set config , have : dir1, dir2, type.
-type only use [dev, tst, test]
-* **eg**: scmq config-set dir1 D:/choice/merchants
-### scmq go
-* **start!**: go! but must config set first.
+if <1> not is "group" or "g", program may remove project. now: 
+* **scmq remove <1> <2>** 
+* **<1>** location group name
+* **<2>** project name.
+* **example**: scmq remove G1 p1 // Remove the p1 project in the G1 group
 ### scmq version
 * **version**: see version

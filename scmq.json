@@ -1,0 +1,15 @@
+{
+  "group": [
+    {
+      "title": "group1",
+      "group": [
+        {
+          "title": "test",
+          "dir": "D:\\test",
+          "comd": "npm start"
+        }
+      ]
+    }
+  ],
+  "use": ""
+}
