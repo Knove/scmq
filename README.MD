@@ -55,6 +55,11 @@ When you have been configured, the second day want to start :D
 ```javascript
 // start G1！
 scmq
+```
+When you want change the default start group
+```javascript
+// start G1！
+scmq
 // may also start G1!
 scmq start G1
 // set default start group
