@@ -4,6 +4,7 @@ const path = require("path");
 
 function addGroup(configData, value) {
   console.log(chalk.blue("———————————————————————————————————————————————"));
+  const group = configData.group;
   if (value) {
     let flag = true;
     group.map(item => {
