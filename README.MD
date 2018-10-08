@@ -1,8 +1,6 @@
 # SCMQ -  Many Project Start Manage
 
 [![NPM version](https://img.shields.io/npm/v/scmq.svg?style=flat)](https://npmjs.org/package/scmq)
-[![NPM downloads](http://img.shields.io/npm/dm/scmq.svg?style=flat)](https://npmjs.org/package/scmq)
-
 
 ---
 [中文文档](https://github.com/KnoveZ/scmq/blob/master/README.CN.MD)
